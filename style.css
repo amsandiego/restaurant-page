@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
 :root {
   --blue-gray: #dbd8e3;
   --black: #1a1c1e;
@@ -9,6 +11,7 @@
   --bluish: #66bfbf;
   --true-navy: #132743;
   --translucent-gray: rgba(219, 216, 227, 0.7);
+  --bg-cover-color: rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -107,4 +110,75 @@ h1.name {
 
 .hover-filled-slide-down:hover::before {
   height: 0%;
+}
+
+/* Home */
+.home {
+  min-height: 90vh;
+  padding: 2rem 10rem;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  background-color: var(--bg-cover-color);
+  color: var(--white);
+}
+
+.welcome {
+  font-family: 'Niconne', cursive;
+  font-size: 2rem;
+}
+
+.tagline {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.message {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+main button:first-child {
+  background-color: var(--pink);
+  border: 2px solid var(--pink);
+}
+
+main button {
+  padding: 0.7rem 1.5rem;
+  background-color: var(--bg-cover-color);
+}
+
+button {
+  width: 10rem;
+  border-radius: 3px;
+  border: 2px solid var(--white);
+  text-transform: uppercase;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--translucent-gray);
+  color: var(--darkest-purple);
+  font-size: 1.2rem;
+}
+
+.fa-github {
+  font-size: 1.3rem;
+  color: var(--darkest-purple);
 }

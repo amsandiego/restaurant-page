@@ -4,23 +4,23 @@ const createHome = () => {
 
   const welcome = createParagraph('Welcome to Cafe San Diego');
   welcome.classList.add('welcome');
-  home.appendChild(welcome);
 
   const tagline = createParagraph('Where flavor meets tradition');
   tagline.classList.add('tagline');
-  home.appendChild(tagline);
 
   const message = createParagraph(
     'Explore our best menu and taste the difference of our Asian comfort food.'
   );
   message.classList.add('message');
-  home.appendChild(message);
 
   const actionButtons = document.createElement('div');
   actionButtons.classList.add('actionButtons');
-  actionButtons.appendChild(createButton('Our Menu'));
-  actionButtons.appendChild(createButton('Contact Us'));
-  home.appendChild(actionButtons);
+  const menuButton = createButton('Our Menu');
+  menuButton.setAttribute('id', 'menu-button');
+  const contactButton = createButton('Contact Us');
+  actionButtons.append(menuButton, contactButton);
+
+  home.append(welcome, tagline, message, actionButtons);
 
   return home;
 };

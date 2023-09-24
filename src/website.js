@@ -89,7 +89,6 @@ const setActiveButton = (button) => {
   const buttons = document.querySelectorAll('.button-nav');
 
   buttons.forEach((button) => {
-    console.log(this);
     if (button !== this) {
       button.classList.remove('active');
     }

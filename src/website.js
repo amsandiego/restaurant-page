@@ -105,7 +105,7 @@ const initialize = () => {
   content.appendChild(createMain());
   content.appendChild(createFooter());
 
-  setActiveBtn(document.querySelector('.nav-button'));
+  setActiveButton(document.querySelector('.button-nav'));
   loadHome();
 };
 

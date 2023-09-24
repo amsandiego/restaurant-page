@@ -16,7 +16,7 @@ const createHome = () => {
   message.classList.add('message');
   home.appendChild(message);
 
-  const actionButtons = createElement('div');
+  const actionButtons = document.createElement('div');
   actionButtons.classList.add('actionButtons');
   actionButtons.appendChild(createButton('Our Menu'));
   actionButtons.appendChild(createButton('Contact Us'));

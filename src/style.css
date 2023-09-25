@@ -127,6 +127,7 @@ h1.name {
   gap: 2rem;
   background-color: var(--bg-cover-color);
   color: var(--white);
+  animation: fadeIn 1.5s;
 }
 
 .welcome {
@@ -177,6 +178,7 @@ button {
   place-content: center;
   gap: 1rem;
   padding: 2rem 10rem;
+  animation: fadeIn 1.5s;
 }
 
 .card {
@@ -216,6 +218,81 @@ button {
   height: 60%;
 }
 
+/* Contact */
+.contact {
+  grid-template-areas:
+    'contact contact'
+    'form map';
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2rem auto;
+  min-height: 90vh;
+  padding: 2rem 10rem;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  animation: fadeIn 1.5s;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--bg-cover-color);
+  gap: 1rem;
+}
+
+.contact img {
+  grid-area: map;
+  width: 300px;
+  height: 350px;
+  align-self: center;
+}
+
+.contactDetails {
+  grid-area: contact;
+  padding: 2rem;
+}
+
+.contactForm {
+  grid-area: form;
+  display: grid;
+  padding: 5rem 2rem;
+}
+
+.form-field {
+  display: grid;
+  grid-template-areas: 'label field';
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  min-width: 4rem;
+  text-align: right;
+  grid-area: label;
+}
+
+input {
+  height: 2rem;
+}
+
+textarea {
+  height: 15rem;
+  resize: none;
+}
+
+input,
+textarea {
+  grid-area: field;
+  padding: 1rem 1rem;
+  outline: none;
+  border-radius: 3px;
+}
+
+.contactUsButton {
+  background-color: var(--pink);
+  border: none;
+  border-radius: 3px;
+  justify-self: end;
+}
+
 /* Footer */
 .footer {
   display: flex;
@@ -232,4 +309,49 @@ button {
 .fa-github {
   font-size: 1.3rem;
   color: var(--darkest-purple);
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+  nav {
+    display: flex;
+  }
+
+  .button-nav {
+    min-width: 0px;
+    margin: 0px 10px 15px;
+  }
+
+  .button-nav span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .home {
+    gap: 5rem;
+  }
+
+  .contact {
+    grid-template-areas:
+      'contact contact'
+      'form form'
+      'map map';
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 57%;
+  }
 }

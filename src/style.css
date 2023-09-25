@@ -179,6 +179,7 @@ button {
   gap: 1rem;
   padding: 2rem 10rem;
   animation: fadeIn 1.5s;
+  background-color: var(--bg-cover-color);
 }
 
 .card {
